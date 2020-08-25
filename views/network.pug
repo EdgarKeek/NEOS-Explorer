@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .col-md-12(style="margin-bottom: 4%")
+    .text-center(style='margin-bottom:15px;')
+      i #{settings.locale.net_warning}
+    .tabpanel(style="margin-left:20px;")
+      ul.nav.nav-tabs(role='tablist')
+        li.nav-item(role='presentation')
+          a.nav-link.active(href='#connections', aria-controls='connections', role='tab', data-toggle='tab') #{settings.locale.net_connections}
+        li.nav-item(role='presentation')
+          a.nav-link(href='#addnodes', aria-controls='addnodes', role='tab', data-toggle='tab') #{settings.locale.net_addnodes}
+    .tab-content(style="margin-top:-6px;")
+      #connections.tabpanel.tab-pane.active 
+        include ./includes/net_list.pug
+      #addnodes.tabpanel.tab-pane
+        include ./includes/net_addnodes.pug
