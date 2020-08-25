@@ -287,7 +287,7 @@ html
     block content
     div(class=footerClasses, role='navigation')
       .col-md-4.navbar-nav
-        if settings.display.twitter || settings.display.facebook || settings.display.googleplus || settings.display.youtube
+        if settings.display.twitter || settings.display.facebook || settings.display.youtube || settings.display.telegram || settings.display.discord || settings.display.bitcointalk || settings.display.github || settings.display.website
           ul.nav.justify-content-left
             if settings.display.twitter
               li.footer-icon
@@ -300,27 +300,27 @@ html
             if settings.display.youtube
               li.footer-icon
                 a#youtube-icon.nav-link.social-link(href="https://www.youtube.com/channel/"+settings.youtube, target='_blank')
-                span.glyphicon.fab.fa-youtube
+                  span.glyphicon.fab.fa-youtube
             if settings.display.telegram
               li.footer-icon
                 a#telegram-icon.nav-link.social-link(href="https://t.me/"+settings.telegram, target='_blank')
-                span.glyphicon.fab.fa-telegram-plane
+                  span.glyphicon.fab.fa-telegram-plane
             if settings.display.discord
               li.footer-icon
                 a#discord-icon.nav-link.social-link(href="https://discord.gg/"+settings.discord, target='_blank')
-                span.glyphicon.fab.fa-discord
+                  span.glyphicon.fab.fa-discord
             if settings.display.bitcointalk
               li.footer-icon
                 a#bitcointalk-icon.nav-link.social-link(href="https://bitcointalk.org/index.php?topic="+settings.bitcointalk, target='_blank')
-                span.glyphicon.fab.fa-btc
+                  span.glyphicon.fab.fa-btc
             if settings.display.github
               li.footer-icon
                 a#github-icon.nav-link.social-link(href="https://github.com/"+settings.github, target='_blank')
-                span.glyphicon.fab.fa-github
+                  span.glyphicon.fab.fa-github
             if settings.display.website
               li.footer-icon
-                a#website-icon.nav-link.social-link(href=settings.website, target='_blank')
-                span.glyphicon.fas.fa-link
+                a#website-icon.nav-link.social-link(href=""+settings.website, target='_blank')
+                  span.glyphicon.fas.fa-link
       .col-md-4.navbar-nav
         ul.nav.justify-content-center
           li.text-center(style='margin-left:80px;margin-right:80px;')
