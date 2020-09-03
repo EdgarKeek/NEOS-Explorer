@@ -33,6 +33,7 @@ if (settings.heavy != true) {
     'verifymessage',
     'getmasternodecount',
     'getmasternodecountonline',
+    'listmasternodes',
     settings.masternodes.cli,
     settings.masternodes.cli + 'list',
   ]);
@@ -72,6 +73,7 @@ if (settings.heavy != true) {
     'verifymessage',
     'getmasternodecount',
     'getmasternodecountonline',
+    'listmasternodes',
     settings.masternodes.cli,
     settings.masternodes.cli + 'list',
   ]);

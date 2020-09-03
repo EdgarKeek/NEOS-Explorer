@@ -347,6 +347,20 @@ router.get('/ext/masternodes', function(req, res) {
     var mnList = [];
 
     for (var key in list) {
+      if  (settings.masternodes.cli === 'masternode') {
+        var mn = list[key];
+        var mnItem = {
+          address: mn.addr,
+          status: mn.status,
+          lastseen: mn.lastseen,
+          lastpaid: mn.lastpaid,
+//          ip: ""
+        };
+        mnList.push(mnItem);
+
+        continue;
+      }
+
       if (list.hasOwnProperty(key)) {
         var mnData = list[key].split(/(\s+)/).filter( function(e) { return e.trim().length > 0; } );
         var mnItem = {
