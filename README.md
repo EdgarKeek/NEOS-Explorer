@@ -2,7 +2,7 @@ NEOS Blockchain Explorer - 1.7.4A
 ================
 
 An open source block explorer written in node.js with masternodes and ssl support.  
-See it live : https://shroud.mastermine.eu/  
+See it live : https://explorer.shroudx.eu/  
 
 This explorer is based on Iquidus Explorer (https://github.com/iquidus/explorer).  
 This explorer's layout is based on MNOS Explorer v1.0.0 (https://github.com/MNOSIO/explorer).
@@ -42,7 +42,7 @@ sudo apt-get install libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compi
 sudo apt -y autoremove --purge
 ```
 
-###### When itís done, reboot the server
+###### When it‚Äôs done, reboot the server
 ```bash
 sudo reboot
 ```
@@ -57,7 +57,7 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 ```
 
 #### Install the coin daemon
-Install the daemon reboot safe and add the parameters in the config file. Use no special characters for the username and password! Only the local host have rpc access, so the username and password mustnít be very difficult and long. Start and sync the blockchain.
+Install the daemon reboot safe and add the parameters in the config file. Use no special characters for the username and password! Only the local host have rpc access, so the username and password mustn‚Äôt be very difficult and long. Start and sync the blockchain.
 ```
 rpcuser=rpcuser
 rpcpassword=rpcpassword
@@ -219,9 +219,9 @@ ufw allow http comment "HTTP"
 ufw allow https comment "HTTPS"
 ```
 
-###### Create a https certificate with Letís Encrypt
+###### Create a https certificate with Let‚Äôs Encrypt
 
-Here an example to create a https certificate with Letís Encrypt to have a secure browser session.
+Here an example to create a https certificate with Let‚Äôs Encrypt to have a secure browser session.
 
 Add the certbot package repo. Press Enter to accept the key.
 ```bash
@@ -236,7 +236,7 @@ Obtaining an SSL Certificate. Replace the URL with yours.
 sudo certbot --nginx -d explorer.yourdomain.com -d www.explorer.yourdomain.com
 ```
 
-If thatís successful, certbot will ask how youíd like to configure your HTTPS settings.
+If that‚Äôs successful, certbot will ask how you‚Äôd like to configure your HTTPS settings.
 ```
 Output
 Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
@@ -249,7 +249,7 @@ change by editing your web server's configuration.
 Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 ```
 
-Choose here the option ì2î.
+Choose here the option ‚Äú2‚Äù.
 
 Verifying Certbot Auto-Renewal
 ```bash
@@ -259,7 +259,7 @@ sudo certbot renew --dry-run
 Finally you can configure the design and the correct API links. Switch trough the templates and choose what you like, replace the logo and the favicon.
 To set the API links correct, choose a block and fill the settings.conf with the relevant values from your chain.
 
-Create in /var/web/html a file ìrobots.txtî to prevent that the web crawlers index the explorer into public search engines.
+Create in /var/web/html a file ‚Äúrobots.txt‚Äù to prevent that the web crawlers index the explorer into public search engines.
 ```
 User-agent: *
 Disallow: /address
@@ -301,7 +301,7 @@ notes:
 
 ### Clean the MongoDB
 
-You can drop the mongo db with the following commands. Itís required it the db is corrupt.
+You can drop the mongo db with the following commands. It‚Äôs required it the db is corrupt.
 ```bash
 mongo  
 use explorerdb
