@@ -22,7 +22,7 @@ block content
               json.data[i]['lastseen'] = new Date((json.data[i]['lastseen']) * 1000).toLocaleString();
               if (json.data[i]['lastpaid'])
                 if (json.data[i]['lastpaid'] == 0)
-                  json.data[i]['lastpaid'] = '<em>never, new node!</em>';
+                  json.data[i]['lastpaid'] = '<em>unknown</em>';
                 else
                   json.data[i]['lastpaid'] = new Date((json.data[i]['lastpaid']) * 1000).toLocaleString();
               else
@@ -34,6 +34,7 @@ block content
         columns: [
           { data: 'address', width: '25%', className: 'text-center' },
           { data: 'status', width: '15%' },
+          { data: 'protocol', width: '10%' },
           { data: 'lastseen', width:'25%' },
           { data: 'lastpaid', width:'25%' },
         ]
@@ -49,6 +50,7 @@ block content
           tr
             th.text-center #{settings.locale.mn_address}
             th.text-center #{settings.locale.mn_status}
+            th.text-center #{settings.locale.mn_protocol}
             th.text-center #{settings.locale.mn_lastseen}
             th.text-center #{settings.locale.mn_lastpaid}
         tbody.text-center

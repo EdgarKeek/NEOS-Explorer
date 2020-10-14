@@ -352,6 +352,7 @@ router.get('/ext/masternodes', function(req, res) {
         var mnItem = {
           address: mn.addr,
           status: mn.status,
+          protocol: mn.protocol,
           lastseen: mn.lastseen,
           lastpaid: mn.lastpaid,
 //          ip: ""
@@ -366,6 +367,7 @@ router.get('/ext/masternodes', function(req, res) {
         var mnItem = {
           address: "",
           status: "",
+          protocol: "",
           lastseen: "",
           lastpaid: null,
           ip: ""
@@ -380,6 +382,10 @@ router.get('/ext/masternodes', function(req, res) {
         // Status
         if (settings.masternodes.list_format.status > -1)
           mnItem.status = mnData[settings.masternodes.list_format.status - 1];
+        
+        // Protocol
+        if (settings.masternodes.list_format.protocol > -1)
+          mnItem.protocol = mnData[settings.masternodes.list_format.protocol - 1];
 
         // last seen
         if (settings.masternodes.list_format.lastseen > -1)

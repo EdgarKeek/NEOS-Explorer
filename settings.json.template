@@ -154,6 +154,7 @@
     "list_format": {
       "address": 3,
       "status": 1,
+      "protocol": 2,
       "lastseen": 4,
       "lastpaid": 6,
       "ip": 0
